@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ============================================
+         HEAD SECTION - META INFORMATION & SEO
+         ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Jessy Apenda | Network Engineer | Cybersecurity & IT Professional</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Jessy Apenda - Network Engineer, Cybersecurity Student, Junior Pentester, IT Support Specialist based in Papua New Guinea.">
+    <meta name="author" content="Jessy Apenda">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#020617">
+    
+    <!-- Security Headers - X-Frame-Options, CSP, etc. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+    
+    <!-- Content Security Policy - Protects against XSS attacks -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://formspree.io; frame-src https://formspree.io;">
+    
+    <!-- ============================================
+         LINKS - FAVICON, FONTS, & STYLESHEETS
+         ============================================ -->
+    <link rel="canonical" href="https://jessyapenda.github.io/portfolio">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23020617' width='100' height='100' rx='20'/><path d='M50 15 L75 25 L75 50 C75 70 50 85 50 85 C50 85 25 70 25 50 L25 25 Z' fill='none' stroke='%2334d399' stroke-width='5'/><circle cx='50' cy='45' r='5' fill='%2334d399'/><rect x='45' y='50' width='10' height='15' fill='%2334d399'/></svg>">
+    
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ============================================
+         TAILWIND CSS CONFIGURATION
+         ============================================ -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <!-- ============================================
+         STRUCTURED DATA - JSON-LD (SEO)
+         ============================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jessy Apenda",
+        "alternateName": "Jessy Apenda",
+        "url": "https://jessyapenda.github.io/portfolio",
+        "sameAs": [
+            "https://github.com/voidwalker01",
+            "https://linkedin.com/in/jessyapenda"
+        ],
+        "jobTitle": ["Cybersecurity Student", "Full-Stack Developer", "Junior Pentester", "IT Support Specialist"],
+        "description": "IT professional specializing in cybersecurity, penetration testing, networking, and electronic systems based in Papua New Guinea.",
+        "knowsAbout": ["Cybersecurity", "Penetration Testing", "Networking", "Cisco", "Python", "MySQL", "Arduino", "IT Support"],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Papua New Guinea"
+        }
+    }
+    </script>
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<!-- ============================================
+     BODY - MAIN PAGE STRUCTURE
+     ============================================ -->
+<body class="bg-slate-950 text-slate-100 font-mono antialiased min-h-screen flex flex-col">
+    
+    <!-- ============================================
+         SECTION: NAVIGATION HEADER
+         ============================================ -->
+    <nav class="border-b border-slate-800 bg-slate-950/95 backdrop-blur-sm z-50 sticky top-0">
+        <div class="max-w-6xl mx-auto px-4 py-3 sm:py-4 flex justify-between items-center">
+            <!-- Logo / Brand -->
+            <a href="#" class="flex items-center gap-2 text-slate-100 hover:text-emerald-400 transition-colors touch-target">
+                <span class="text-emerald-400">~/</span>
+                <span class="font-semibold">portfolio</span>
+                <span class="text-slate-600">$</span>
+            </a>
+            
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center gap-6 text-sm">
+                <a href="#about" class="text-slate-400 hover:text-slate-100 transition-colors">01_about</a>
+                <a href="#research" class="text-slate-400 hover:text-slate-100 transition-colors">02_research</a>
+                <a href="#arsenal" class="text-slate-400 hover:text-slate-100 transition-colors">03_arsenal</a>
+                <a href="#projects" class="text-slate-400 hover:text-slate-100 transition-colors">04_projects</a>
+                <a href="#contact" class="text-slate-400 hover:text-slate-100 transition-colors">05_contact</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button type="button" id="mobile-menu-btn" class="md:hidden text-slate-400 hover:text-slate-100 touch-target p-2 -mr-2" title="Toggle mobile menu" aria-label="Toggle navigation menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 px-4 py-4 bg-slate-950">
+            <div class="flex flex-col gap-1 text-sm">
+                <a href="#about" class="block py-3 px-4 text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 rounded transition-colors touch-target">01_about</a>
+                <a href="#research" class="block py-3 px-4 text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 rounded transition-colors touch-target">02_research</a>
+                <a href="#arsenal" class="block py-3 px-4 text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 rounded transition-colors touch-target">03_arsenal</a>
+                <a href="#projects" class="block py-3 px-4 text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 rounded transition-colors touch-target">04_projects</a>
+                <a href="#contact" class="block py-3 px-4 text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 rounded transition-colors touch-target">05_contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         MAIN CONTENT AREA
+         ============================================ -->
+    <main class="flex-1">
+        
+        <!-- ==========================================
+             SECTION 01: HERO / HOME
+             Contains: Name, Roles typewriter, CTAs, Terminal animation
+             ========================================== -->
+        <section id="home" class="min-h-[calc(100vh-80px)] sm:min-h-[calc(100vh-100px)] flex items-center justify-center px-4 py-8">
+            <div class="max-w-3xl w-full">
+                <!-- Last Login Timestamp -->
+                <div class="mb-4 text-slate-500 text-xs sm:text-sm">
+                    <span class="text-amber-500">🛡️</span> Last login: <span id="last-login"></span>
+                </div>
+                
+                <!-- Main Hero Card -->
+                <div class="border border-slate-800 bg-slate-900/50 p-4 sm:p-6 md:p-8 rounded-lg">
+                    <p class="text-emerald-400 mb-2 text-sm sm:text-base">$ whoami</p>
+                    <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 tracking-tight">Jessy Apenda</h1>
+                    
+                    <!-- Roles Typewriter Effect -->
+                    <p class="text-slate-400 text-base sm:text-lg md:text-xl mb-3 sm:mb-4">
+                        <span class="text-slate-500">></span> <span id="roles-output" class="text-emerald-400/80"></span><span id="roles-cursor" class="text-emerald-400 animate-pulse">|</span>
+                    </p>
+                    
+                    <!-- Tagline -->
+                    <p class="text-slate-500 mb-6 sm:mb-8 text-xs sm:text-sm md:text-base leading-relaxed">
+                        Securing systems, building networks, and crafting solutions. Passionate about Networking, cybersecurity, hardware integration, and protecting digital infrastructure.
+                    </p>
+                    
+                    <!-- Call-to-Action Buttons -->
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+                        <a href="#projects" class="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-emerald-400/10 border border-emerald-400/30 text-emerald-400 hover:bg-emerald-400/20 rounded transition-colors text-sm touch-target">
+                            <span>./view_projects</span>
+                            <span class="text-emerald-300">→</span>
+                        </a>
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 border border-slate-700 hover:border-slate-600 rounded transition-colors text-sm touch-target">
+                            <span>./contact</span>
+                        </a>
+                        <a href="docs/Jessy-Apenda-CV.pdf" download class="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 border border-emerald-400 rounded text-sm text-emerald-400 hover:bg-emerald-400/10 transition-colors group animate-glow touch-target">
+                            <svg class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <span>resume.pdf</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Terminal Animation Card -->
+                <div class="mt-4 sm:mt-6 border border-slate-800 bg-slate-900/50 overflow-hidden rounded-lg">
+                    <!-- Terminal Header -->
+                    <div class="flex items-center gap-2 px-3 sm:px-4 py-2 border-b border-slate-800 bg-slate-900/80">
+                        <div class="flex gap-1.5">
+                            <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-red-500/70"></span>
+                            <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-yellow-500/70"></span>
+                            <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-green-500/70"></span>
+                        </div>
+                        <span class="text-xs text-slate-500 ml-2">system_info.sh</span>
+                    </div>
+                    <!-- Terminal Output -->
+                    <div class="p-3 sm:p-4 font-mono text-xs sm:text-sm">
+                        <div id="terminal-output" class="space-y-1 min-h-[60px] sm:min-h-[100px]"></div>
+                        <span id="terminal-cursor" class="inline-block w-2 h-3 sm:h-4 bg-emerald-400 animate-pulse"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 02: ABOUT
+             Contains: Profile image, Bio, Stats, Skills
+             ========================================== -->
+        <section id="about" class="py-12 md:py-24 px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Section Header -->
+                <div class="flex items-center gap-3 mb-6 sm:mb-8">
+                    <span class="text-slate-600">#</span>
+                    <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-slate-100">about</h2>
+                    <span class="text-slate-600 hidden sm:inline">← section</span>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-6 sm:gap-8">
+                    <!-- Left Column: Profile & Bio -->
+                    <div class="border border-slate-800 bg-slate-900/30 p-4 sm:p-6 rounded-lg">
+                        <!-- Profile Picture -->
+                        <div class="mb-4 sm:mb-6">
+                            <div class="w-full max-w-[180px] sm:max-w-[200px] md:max-w-[240px] aspect-square border border-slate-600 rounded-lg overflow-hidden mx-auto shadow-lg shadow-emerald-500/10 ring-1 ring-emerald-500/20">
+                                <img src="assets/img/profile-pic/profile-img.png" alt="Jessy Apenda" class="w-full h-full object-cover object-top" loading="eager" style="image-rendering: auto;">
+                            </div>
+                        </div>
+                        
+                        <!-- Bio Typewriter Terminal -->
+                        <div class="border border-slate-800 bg-slate-900/50 p-2 sm:p-3 font-mono text-xs rounded">
+                            <p class="text-emerald-400 mb-2">$ cat about.txt</p>
+                            <div id="about-output" class="text-slate-400 leading-relaxed min-h-[50px] sm:min-h-[60px]"></div>
+                            <span id="about-cursor" class="inline-block w-2 h-3 bg-emerald-400 animate-pulse mt-1"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Stats & Skills -->
+                    <div class="flex flex-col gap-4">
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                            <div class="border border-slate-800 bg-slate-900/30 p-3 sm:p-4 rounded-lg">
+                                <p class="text-emerald-400 text-xl sm:text-2xl font-bold">1+</p>
+                                <p class="text-slate-500 text-[10px] sm:text-xs mt-1">years_exp</p>
+                            </div>
+                            <div class="border border-slate-800 bg-slate-900/30 p-3 sm:p-4 rounded-lg">
+                                <p class="text-emerald-400 text-xl sm:text-2xl font-bold">11</p>
+                                <p class="text-slate-500 text-[10px] sm:text-xs mt-1">projects</p>
+                            </div>
+                            <div class="border border-slate-800 bg-slate-900/30 p-3 sm:p-4 rounded-lg">
+                                <p class="text-emerald-400 text-xs sm:text-sm md:text-base font-bold leading-tight">Network Engineer & Cybersecurity</p>
+                                <p class="text-slate-500 text-[10px] sm:text-xs mt-1">Professional</p>
+                            </div>
+                            <div class="border border-slate-800 bg-slate-900/30 p-3 sm:p-4 rounded-lg">
+                                <p class="text-emerald-400 text-xl sm:text-2xl font-bold">8+</p>
+                                <p class="text-slate-500 text-[10px] sm:text-xs mt-1">technologies</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Skills Tags -->
+                        <div class="border border-slate-800 bg-slate-900/30 p-3 sm:p-4 flex-1 rounded-lg">
+                            <p class="text-slate-500 text-xs mb-3">// skills</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-slate-800 border border-slate-700 rounded text-[10px] sm:text-xs text-slate-300">Pentest</span>
+                                <span class="px-2 py-1 bg-slate-800 border border-slate-700 rounded text-[10px] sm:text-xs text-slate-300">Python</span>
+                                <span class="px-2 py-1 bg-slate-800 border border-slate-700 rounded text-[10px] sm:text-xs text-slate-300">Networking</span>
+                                <span class="px-2 py-1 bg-slate-800 border border-slate-700 rounded text-[10px] sm:text-xs text-slate-300">Cisco</span>
+                                <span class="px-2 py-1 bg-slate-800 border border-slate-700 rounded text-[10px] sm:text-xs text-slate-300">Web Dev</span>
+                                <span class="px-2 py-1 bg-slate-800 border border-slate-700 rounded text-[10px] sm:text-xs text-slate-300">Electronics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 03: RESEARCH & DESIGN
+             Contains: Renewable Energy Research, Design Portfolio
+             ========================================== -->
+        <section id="research" class="py-12 md:py-24 px-4">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="flex items-center gap-3 mb-6 sm:mb-8">
+                    <span class="text-slate-600">#</span>
+                    <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-slate-100">specialized_research_design</h2>
+                    <span class="text-slate-600 hidden sm:inline">← section</span>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
+                    <!-- Research Card: Renewable Energy -->
+                    <article class="border border-slate-800 bg-slate-900/30 p-4 sm:p-6 hover:border-emerald-500/50 transition-colors rounded-lg">
+                        <div class="flex items-center gap-3 mb-3 sm:mb-4">
+                            <div class="w-8 h-8 sm:w-10 sm:h-10 border border-emerald-500/30 bg-emerald-500/10 rounded flex items-center justify-center">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-[10px] sm:text-xs text-emerald-400/60 uppercase tracking-wider">Research Lead</span>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-semibold text-slate-100 mb-3">Renewable Energy & Sustainable Island Solutions</h3>
+                        <div class="mb-3 sm:mb-4 border border-slate-700 rounded-lg overflow-hidden">
+                            <img src="assets/img/research.png" alt="Renewable Energy Research" class="w-full h-32 sm:h-48 object-cover hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'">
+                        </div>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Leading research initiatives for tropical island settlers, focusing on sustainable energy solutions and environmental conservation.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded text-[10px] text-emerald-400">Solar</span>
+                            <span class="px-2 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded text-[10px] text-emerald-400">Wind</span>
+                            <span class="px-2 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded text-[10px] text-emerald-400">Sustainability</span>
+                            <span class="px-2 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded text-[10px] text-emerald-400">Off-Grid</span>
+                        </div>
+                    </article>
+
+                    <!-- Design Portfolio Card -->
+                    <article class="border border-slate-800 bg-slate-900/30 p-4 sm:p-6 hover:border-cyan-500/50 transition-colors rounded-lg">
+                        <div class="flex items-center gap-3 mb-3 sm:mb-4">
+                            <div class="w-8 h-8 sm:w-10 sm:h-10 border border-cyan-500/30 bg-cyan-500/10 rounded flex items-center justify-center">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-[10px] sm:text-xs text-cyan-400/60 uppercase tracking-wider">Visual Communications</span>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-semibold text-slate-100 mb-3 sm:mb-4">Design Portfolio</h3>
+                        <!-- Design Categories Grid -->
+                        <div class="grid grid-cols-2 gap-2 sm:gap-3">
+                            <div class="border border-slate-700 bg-slate-800/50 rounded overflow-hidden hover:bg-slate-800 transition-colors group">
+                                <div class="aspect-square">
+                                    <img src="assets/img/posters/flyers.png" alt="Posters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                </div>
+                                <p class="text-[10px] sm:text-xs text-slate-300 text-center py-1.5 sm:py-2 bg-slate-800/80">Posters</p>
+                            </div>
+                            <div class="border border-slate-700 bg-slate-800/50 rounded overflow-hidden hover:bg-slate-800 transition-colors group">
+                                <div class="aspect-square">
+                                    <img src="assets/img/certificates/Mr McRonald Nale.png" alt="Certificates" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                </div>
+                                <p class="text-[10px] sm:text-xs text-slate-300 text-center py-1.5 sm:py-2 bg-slate-800/80">Certificates</p>
+                            </div>
+                            <div class="border border-slate-700 bg-slate-800/50 rounded overflow-hidden hover:bg-slate-800 transition-colors group">
+                                <div class="aspect-square">
+                                    <img src="assets/img/logo/logo3.png" alt="Logos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                </div>
+                                <p class="text-[10px] sm:text-xs text-slate-300 text-center py-1.5 sm:py-2 bg-slate-800/80">Logos</p>
+                            </div>
+                            <div class="border border-slate-700 bg-slate-800/50 rounded overflow-hidden hover:bg-slate-800 transition-colors group">
+                                <div class="aspect-square">
+                                    <img src="assets/img/flyers/Rem.png" alt="Flyers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                </div>
+                                <p class="text-[10px] sm:text-xs text-slate-300 text-center py-1.5 sm:py-2 bg-slate-800/80">Flyers</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 04: TECHNICAL ARSENAL (SKILLS)
+             Contains: 12 skill cards with color-coded categories
+             ========================================== -->
+        <section id="arsenal" class="py-12 md:py-24 px-4">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="flex items-center gap-3 mb-6 sm:mb-8">
+                    <span class="text-slate-600">#</span>
+                    <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-slate-100">technical_arsenal</h2>
+                    <span class="text-slate-600 hidden sm:inline">← section</span>
+                </div>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
+                    <!-- Skill Card: MySQL -->
+                    <div class="arsenal-card group border border-slate-800 bg-slate-900/30 p-3 sm:p-4 md:p-5 hover:border-emerald-500/50 transition-all duration-300 rounded-lg">
+                        <div class="arsenal-icon w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center rounded-lg bg-emerald-500/10 border border-emerald-500/20 group-hover:bg-emerald-500/20 group-hover:animate-arsenal-pulse-emerald transition-all">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-[10px] sm:text-xs md:text-sm text-slate-200 text-center mb-1 sm:mb-2 leading-tight">MySQL</p>
+                        <div class="flex justify-center">
+                            <span class="px-1.5 sm:px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/30 rounded text-[8px] sm:text-[10px] text-emerald-400">Mastered</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card: Cisco -->
+                    <div class="arsenal-card group border border-slate-800 bg-slate-900/30 p-3 sm:p-4 md:p-5 hover:border-cyan-500/50 transition-all duration-300 rounded-lg">
+                        <div class="arsenal-icon w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center rounded-lg bg-cyan-500/10 border border-cyan-500/20 group-hover:bg-cyan-500/20 group-hover:animate-arsenal-pulse-cyan transition-all">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
+                            </svg>
+                        </div>
+                        <p class="text-[10px] sm:text-xs md:text-sm text-slate-200 text-center mb-1 sm:mb-2 leading-tight">Cisco & Network</p>
+                        <div class="flex justify-center">
+                            <span class="px-1.5 sm:px-2 py-0.5 bg-cyan-500/10 border border-cyan-500/30 rounded text-[8px] sm:text-[10px] text-cyan-400">Proficient</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card: Python/Java/C++ -->
+                    <div class="arsenal-card group border border-slate-800 bg-slate-900/30 p-3 sm:p-4 md:p-5 hover:border-amber-500/50 transition-all duration-300 rounded-lg">
+                        <div class="arsenal-icon w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center rounded-lg bg-amber-500/10 border border-amber-500/20 group-hover:bg-amber-500/20 group-hover:animate-arsenal-pulse-amber transition-all">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-[10px] sm:text-xs md:text-sm text-slate-200 text-center mb-1 sm:mb-2 leading-tight">Python, Java</p>
+                        <div class="flex justify-center">
+                            <span class="px-1.5 sm:px-2 py-0.5 bg-amber-500/10 border border-amber-500/30 rounded text-[8px] sm:text-[10px] text-amber-400">Proficient</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card: HTML/CSS/JS -->
+                    <div class="arsenal-card group border border-slate-800 bg-slate-900/30 p-3 sm:p-4 md:p-5 hover:border-red-500/50 transition-all duration-300 rounded-lg">
+                        <div class="arsenal-icon w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center rounded-lg bg-red-500/10 border border-red-500/20 group-hover:bg-red-500/20 group-hover:animate-arsenal-pulse-red transition-all">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-[10px] sm:text-xs md:text-sm text-slate-200 text-center mb-1 sm:mb-2 leading-tight">HTML/CSS/JS</p>
+                        <div class="flex justify-center">
+                            <span class="px-1.5 sm:px-2 py-0.5 bg-red-500/10 border border-red-500/30 rounded text-[8px] sm:text-[10px] text-red-400">Skilled</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card: Kali Linux -->
+                    <div class="arsenal-card group border border-slate-800 bg-slate-900/30 p-3 sm:p-4 md:p-5 hover:border-orange-500/50 transition-all duration-300 rounded-lg">
+                        <div class="arsenal-icon w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center rounded-lg bg-orange-500/10 border border-orange-500/20 group-hover:bg-orange-500/20 group-hover:animate-arsenal-pulse-orange transition-all">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-[10px] sm:text-xs md:text-sm text-slate-200 text-center mb-1 sm:mb-2 leading-tight">Kali Linux</p>
+                        <div class="flex justify-center">
+                            <span class="px-1.5 sm:px-2 py-0.5 bg-orange-500/10 border border-orange-500/30 rounded text-[8px] sm:text-[10px] text-orange-400">Proficient</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card: Cloud Technologies -->
+                    <div class="arsenal-card group border border-slate-800 bg-slate-900/30 p-3 sm:p-4 md:p-5 hover:border-lime-500/50 transition-all duration-300 rounded-lg">
+                        <div class="arsenal-icon w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center rounded-lg bg-lime-500/10 border border-lime-500/20 group-hover:bg-lime-500/20 group-hover:animate-arsenal-pulse-lime transition-all">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-lime-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-[10px] sm:text-xs md:text-sm text-slate-200 text-center mb-1 sm:mb-2 leading-tight">Cloud, AWS</p>
+                        <div class="flex justify-center">
+                            <span class="px-1.5 sm:px-2 py-0.5 bg-lime-500/10 border border-lime-500/30 rounded text-[8px] sm:text-[10px] text-lime-400">Learning</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card: Data Analysis -->
+                    <div class="arsenal-card group border border-slate-800 bg-slate-900/30 p-3 sm:p-4 md:p-5 hover:border-violet-500/50 transition-all duration-300 rounded-lg">
+                        <div class="arsenal-icon w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center rounded-lg bg-violet-500/10 border border-violet-500/20 group-hover:bg-violet-500/20 group-hover:animate-arsenal-pulse-violet transition-all">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-[10px] sm:text-xs md:text-sm text-slate-200 text-center mb-1 sm:mb-2 leading-tight">Data Analysis</p>
+                        <div class="flex justify-center">
+                            <span class="px-1.5 sm:px-2 py-0.5 bg-violet-500/10 border border-violet-500/30 rounded text-[8px] sm:text-[10px] text-violet-400">Learning</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card: Electronics  -->
+                    <div class="arsenal-card group border border-slate-800 bg-slate-900/30 p-3 sm:p-4 md:p-5 hover:border-indigo-500/50 transition-all duration-300 rounded-lg">
+                        <div class="arsenal-icon w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center rounded-lg bg-indigo-500/10 border border-indigo-500/20 group-hover:bg-indigo-500/20 group-hover:animate-arsenal-pulse-indigo transition-all">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-[10px] sm:text-xs md:text-sm text-slate-200 text-center mb-1 sm:mb-2 leading-tight">Docker & Virtual Box </p>
+                        <div class="flex justify-center">
+                            <span class="px-1.5 sm:px-2 py-0.5 bg-indigo-500/10 border border-indigo-500/30 rounded text-[8px] sm:text-[10px] text-indigo-400">Proficient</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card: Arduino -->
+                    <div class="arsenal-card group border border-slate-800 bg-slate-900/30 p-3 sm:p-4 md:p-5 hover:border-purple-500/50 transition-all duration-300 rounded-lg">
+                        <div class="arsenal-icon w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center rounded-lg bg-purple-500/10 border border-purple-500/20 group-hover:bg-purple-500/20 group-hover:animate-arsenal-pulse-purple transition-all">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-[10px] sm:text-xs md:text-sm text-slate-200 text-center mb-1 sm:mb-2 leading-tight">Arduino & Electronics</p>
+                        <div class="flex justify-center">
+                            <span class="px-1.5 sm:px-2 py-0.5 bg-purple-500/10 border border-purple-500/30 rounded text-[8px] sm:text-[10px] text-purple-400">Mastered</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card: IT Support -->
+                    <div class="arsenal-card group border border-slate-800 bg-slate-900/30 p-3 sm:p-4 md:p-5 hover:border-blue-500/50 transition-all duration-300 rounded-lg">
+                        <div class="arsenal-icon w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center rounded-lg bg-blue-500/10 border border-blue-500/20 group-hover:bg-blue-500/20 group-hover:animate-arsenal-pulse-blue transition-all">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-[10px] sm:text-xs md:text-sm text-slate-200 text-center mb-1 sm:mb-2 leading-tight">IT Support</p>
+                        <div class="flex justify-center">
+                            <span class="px-1.5 sm:px-2 py-0.5 bg-blue-500/10 border border-blue-500/30 rounded text-[8px] sm:text-[10px] text-blue-400">Expert</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card: QGIS -->
+                    <div class="arsenal-card group border border-slate-800 bg-slate-900/30 p-3 sm:p-4 md:p-5 hover:border-teal-500/50 transition-all duration-300 rounded-lg">
+                        <div class="arsenal-icon w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center rounded-lg bg-teal-500/10 border border-teal-500/20 group-hover:bg-teal-500/20 group-hover:animate-arsenal-pulse-teal transition-all">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-[10px] sm:text-xs md:text-sm text-slate-200 text-center mb-1 sm:mb-2 leading-tight">QGIS</p>
+                        <div class="flex justify-center">
+                            <span class="px-1.5 sm:px-2 py-0.5 bg-teal-500/10 border border-teal-500/30 rounded text-[8px] sm:text-[10px] text-teal-400">Skilled</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card: DevOps -->
+                    <div class="arsenal-card group border border-slate-800 bg-slate-900/30 p-3 sm:p-4 md:p-5 hover:border-pink-500/50 transition-all duration-300 rounded-lg">
+                        <div class="arsenal-icon w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 sm:mb-3 flex items-center justify-center rounded-lg bg-pink-500/10 border border-pink-500/20 group-hover:bg-pink-500/20 group-hover:animate-arsenal-pulse-pink transition-all">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-[10px] sm:text-xs md:text-sm text-slate-200 text-center mb-1 sm:mb-2 leading-tight">DevOps</p>
+                        <div class="flex justify-center">
+                            <span class="px-1.5 sm:px-2 py-0.5 bg-pink-500/10 border border-pink-500/30 rounded text-[8px] sm:text-[10px] text-pink-400">Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 05: PROJECTS
+             Contains: Dynamically rendered project cards
+             ========================================== -->
+        <section id="projects" class="py-12 md:py-24 px-4 bg-slate-900/20">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="flex items-center gap-3 mb-6 sm:mb-8">
+                    <span class="text-slate-600">#</span>
+                    <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-slate-100">projects</h2>
+                    <span class="text-slate-600 hidden sm:inline">← section</span>
+                </div>
+                <!-- Projects Grid (Populated by JavaScript) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="projects-grid"></div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 06: CONTACT
+             Contains: Contact form, Email, Phone, Social links
+             ========================================== -->
+        <section id="contact" class="py-12 md:py-24 px-4">
+            <div class="max-w-2xl mx-auto">
+                <!-- Section Header -->
+                <div class="flex items-center gap-3 mb-6 sm:mb-8">
+                    <span class="text-slate-600">#</span>
+                    <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-slate-100">contact</h2>
+                    <span class="text-slate-600 hidden sm:inline">← section</span>
+                </div>
+                
+                <!-- Contact Form Card -->
+                <div class="border border-slate-800 bg-slate-900/30 p-4 sm:p-6 rounded-lg">
+                    <!-- Form -->
+                    <form id="contact-form" action="https://formspree.io/f/xkoplqvo" method="POST" class="space-y-4 sm:space-y-5">
+                        <div>
+                            <label class="block text-xs text-slate-500 mb-2">name:</label>
+                            <input type="text" name="name" id="contact-name" required class="w-full px-3 sm:px-4 py-3 sm:py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-400/50 rounded text-sm outline-none transition-colors placeholder:text-slate-700 touch-target" placeholder="$ enter your name">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-500 mb-2">email:</label>
+                            <input type="email" name="email" id="contact-email" required class="w-full px-3 sm:px-4 py-3 sm:py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-400/50 rounded text-sm outline-none transition-colors placeholder:text-slate-700 touch-target" placeholder="$ enter your@email">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-500 mb-2">message:</label>
+                            <textarea name="message" id="contact-message" required rows="4" class="w-full px-3 sm:px-4 py-3 sm:py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-400/50 rounded text-sm outline-none transition-colors resize-none placeholder:text-slate-700 touch-target" placeholder="$ enter your message"></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="w-full py-3 sm:py-2.5 bg-emerald-400/10 border border-emerald-400/30 text-emerald-400 hover:bg-emerald-400/20 rounded text-sm font-medium transition-colors touch-target">
+                            <span>submit_message()</span>
+                        </button>
+                    </form>
+                    
+                    <!-- Contact Info -->
+                    <div class="mt-4 pt-4 border-t border-slate-800">
+                        <p class="text-xs text-slate-500 mb-3">// contact_info</p>
+                        <div class="grid grid-cols-1 gap-3 text-xs">
+                            <a href="mailto:jessyapenda2@gmail.com" class="flex items-center gap-3 text-slate-400 hover:text-emerald-400 transition-colors touch-target py-2">
+                                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="truncate">jessyapenda2@gmail.com</span>
+                            </a>
+                            <a href="tel:+67571949600" class="flex items-center gap-3 text-slate-400 hover:text-emerald-400 transition-colors touch-target py-2">
+                                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                                <span>+675 7194 9600</span>
+                            </a>
+                        </div>
+                        <!-- Security Notice -->
+                        <div class="mt-4 pt-3 border-t border-slate-800/50 flex items-center gap-2 text-[10px] text-slate-600">
+                            <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                            <span>encrypted_connection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         FOOTER
+         Contains: Copyright, Status indicator, System time
+         ============================================ -->
+    <footer class="border-t border-slate-800 bg-slate-950 mt-auto">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center py-3 sm:py-4 gap-2 sm:gap-0">
+                <!-- Copyright -->
+                <div class="flex items-center gap-2 sm:gap-4 text-[10px] sm:text-xs text-slate-500 text-center sm:text-left">
+                    <span>© 2026 Jessy Apenda</span>
+                    <span class="hidden sm:inline">|</span>
+                    <span class="hidden xs:inline">All rights reserved</span>
+                </div>
+                <!-- System Status & Time -->
+                <div id="system-status" class="flex items-center gap-2 sm:gap-3 text-[10px] sm:text-xs font-medium">
+                    <span class="flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
+                        <span class="text-slate-500 hidden sm:inline">STATUS:</span>
+                        <span class="text-emerald-400">System Secure</span>
+                    </span>
+                    <span class="text-slate-700 hidden sm:inline">|</span>
+                    <span id="current-time" class="text-slate-400 font-mono"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT - APPLICATION LOGIC
+         ============================================ -->
+    <script>
+        
+        /* ==========================================
+           SECTION: PROJECT DATA
+           Array of project objects for dynamic rendering
+           ========================================== */
+        const projects = [
+            {
+                title: 'PNG Security, Vessel-Monitoring System',
+                description: 'An agile maritime intelligence system leveraging Python, Pandas, and a hybrid Excel-MongoDB backend to track and visualize suspicious vessel activity through a containerized web interface.',
+                tools: ['Python', 'Html, Javascript & Tailwind css', 'Monogo-DB', 'Docker & NGIX server', 'MS Excel', 'Pandas'],
+                category: 'Cybersecurity & Intelligence',
+                image: 'assets/img/vessel-monitoring.png'
+            },
+            {
+                title: 'Home Motion & Radar Intrusion System',
+                description: 'Arduino-based hardware security featuring motion sensors and radar-based detection.',
+                tools: ['Arduino', 'C++', 'Radar Sensors', 'PIR'],
+                category: 'Cybersecurity & Intelligence',
+                image: 'assets/img/defence.png'
+            },
+            {
+                title: 'UPNG MSCS Student Info System',
+                description: 'Robust MySQL-driven student database architecture for university records management.',
+                tools: ['MySQL', 'PHP', 'HTML/CSS'],
+                category: 'Enterprise Software & Databases',
+                image: 'assets/img/upng-img.png'
+            },
+            {
+                title: 'Health DBMS',
+                description: 'Healthcare management system using MS Access SQL and Visual Basic for data operations.',
+                tools: ['MS Access', 'VBA', 'SQL'],
+                category: 'Enterprise Software & Databases',
+                image: 'assets/img/patient-man.png'
+            },
+            {
+                title: 'Banking GUI System',
+                description: 'Desktop application for transaction management including withdrawals and deposits with MySQL backend.',
+                tools: ['Java', 'MySQL', 'Swing GUI'],
+                category: 'Enterprise Software & Databases',
+                image: 'assets/img/bank-gui.png'
+            },
+            {
+                title: 'Car Rental Website',
+                description: 'Fully functional web application for vehicle management and booking systems.',
+                tools: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+                category: 'Web & Full-Stack',
+                image: 'assets/img/car-rental.png'
+            },
+            {
+                title: 'CMS Blog Engine',
+                description: 'Full-stack CRUD website for content management with admin dashboard.',
+                tools: ['Node.js', 'Express', 'MongoDB', 'EJS'],
+                category: 'Web & Full-Stack',
+                image: 'assets/img/cms-blog.png'
+            },
+            {
+                title: 'WAN Simulation (3 Provinces)',
+                description: 'Cisco Packet Tracer configuration of a Wide Area Network across three PNG provinces.',
+                tools: ['Cisco Packet Tracer', 'Networking', 'WAN'],
+                category: 'Infrastructure & Geospatial',
+                image: 'assets/img/wan-network.png'
+            },
+            {
+                title: 'Geospatial Reef Mapping',
+                description: 'Using QGIS to survey and map local reefs in Daru, Western Province.',
+                tools: ['QGIS', 'GPS', 'Geospatial Analysis'],
+                category: 'Infrastructure & Geospatial',
+                image: 'assets/img/CPUE_Daru.jpeg'
+            }
+        ];
+
+        /* ==========================================
+           SECTION: TIME & DATE UTILITIES
+           Functions for displaying current time
+           ========================================== */
+        
+        // Updates the real-time clock in the footer
+        function updateSystemTime() {
+            const timeEl = document.getElementById('current-time');
+            if (!timeEl) return;
+            const update = () => {
+                const now = new Date();
+                timeEl.textContent = now.toLocaleTimeString('en-US', { hour12: false });
+            };
+            update();
+            setInterval(update, 1000);
+        }
+
+        // Sets the "last login" timestamp in the hero section
+        function setLastLogin() {
+            const el = document.getElementById('last-login');
+            if (!el) return;
+            const now = new Date();
+            el.textContent = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false });
+        }
+
+        /* ==========================================
+           SECTION: PROJECT RENDERING
+           Dynamically generates project cards
+           ========================================== */
+        
+        // Renders project cards to the projects-grid element
+        function renderProjects() {
+            const grid = document.getElementById('projects-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+            projects.forEach(project => {
+                const card = document.createElement('article');
+                card.className = 'border border-slate-800 bg-slate-900/30 hover:bg-slate-900/50 hover:border-green-500 hover:scale-105 transition-all duration-300 overflow-hidden';
+                card.innerHTML = `
+                    <div class="aspect-video bg-slate-800 overflow-hidden">
+                        <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-green-400/60 uppercase tracking-wider">${project.category}</span>
+                        <h3 class="text-sm font-semibold text-slate-200 mb-2 leading-tight mt-1">${project.title}</h3>
+                        <p class="text-slate-500 text-xs mb-3 leading-relaxed">${project.description}</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            ${project.tools.map(tool => `<span class="px-2 py-0.5 bg-slate-800 border border-slate-700 rounded text-[10px] text-slate-400">${tool}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        /* ==========================================
+           SECTION: MOBILE MENU
+           Handles mobile navigation toggle
+           ========================================== */
+        
+        // Toggles mobile navigation menu visibility
+        function initMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (!btn || !menu) return;
+            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => menu.classList.add('hidden'));
+            });
+        }
+
+        /* ==========================================
+           SECTION: FORM VALIDATION & SANITIZATION
+           Security utilities for contact form
+           ========================================== */
+        
+        // Sanitizes user input to prevent XSS attacks
+        function sanitizeInput(input) {
+            const div = document.createElement('div');
+            div.textContent = input;
+            return div.innerHTML.replace(/[<>'"&]/g, '');
+        }
+
+        // Validates email format using regex
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+        // Prevents spam by limiting form submissions to once per minute
+        function rateLimit() {
+            const lastSubmit = localStorage.getItem('last_contact_submit');
+            const now = Date.now();
+            if (lastSubmit && (now - parseInt(lastSubmit)) < 60000) {
+                return false;
+            }
+            localStorage.setItem('last_contact_submit', now.toString());
+            return true;
+        }
+
+        /* ==========================================
+           SECTION: CONTACT FORM HANDLING
+           Form submission with validation & API integration
+           ========================================== */
+        
+        // Handles contact form submission with validation, rate limiting & Formspree integration
+        function handleContactForm() {
+            const form = document.getElementById('contact-form');
+            if (!form) return;
+            
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const btn = document.getElementById('submit-btn');
+                const originalText = btn.innerHTML;
+                
+                // Check rate limit
+                if (!rateLimit()) {
+                    btn.innerHTML = '<span class="text-amber-400">⏳ rate_limited</span>';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                    }, 3000);
+                    return;
+                }
+
+                btn.innerHTML = '<span class="animate-pulse">sending_</span>';
+                btn.disabled = true;
+
+                // Get form values
+                let name = document.getElementById('contact-name').value.trim();
+                let email = document.getElementById('contact-email').value.trim();
+                let message = document.getElementById('contact-message').value.trim();
+
+                // Validate input length
+                if (name.length > 100 || email.length > 254 || message.length > 2000) {
+                    btn.innerHTML = '<span class="text-red-400">✗ input_too_long</span>';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                    }, 3000);
+                    return;
+                }
+
+                // Validate email format
+                if (!validateEmail(email)) {
+                    btn.innerHTML = '<span class="text-red-400">✗ invalid_email</span>';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                    }, 3000);
+                    return;
+                }
+
+                // Sanitize inputs
+                name = sanitizeInput(name);
+                email = sanitizeInput(email);
+                message = sanitizeInput(message);
+                const timestamp = new Date().toISOString();
+
+                // Save to localStorage as backup
+                saveToLocalStorage({ name, email, message, timestamp });
+
+                // Submit to Formspree
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    
+                    if (response.ok) {
+                        btn.innerHTML = '<span>✓ message_sent</span>';
+                        btn.classList.add('bg-emerald-400/20');
+                        form.reset();
+                        setTimeout(() => {
+                            btn.innerHTML = originalText;
+                            btn.disabled = false;
+                            btn.classList.remove('bg-emerald-400/20');
+                        }, 3000);
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                } catch (error) {
+                    btn.innerHTML = '<span class="text-red-400">✗ error</span>';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                    }, 3000);
+                }
+            });
+        }
+
+        // Saves contact form data to localStorage as backup
+        function saveToLocalStorage(data) {
+            let contacts = JSON.parse(localStorage.getItem('portfolio_contacts') || '[]');
+            contacts.push(data);
+            localStorage.setItem('portfolio_contacts', JSON.stringify(contacts));
+        }
+
+        /* ==========================================
+           SECTION: SMOOTH SCROLL NAVIGATION
+           Enables smooth scrolling for anchor links
+           ========================================== */
+        
+        // Enables smooth scrolling for all anchor links
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+        }
+
+        /* ==========================================
+           SECTION: TERMINAL ANIMATIONS
+           Typewriter effects for hero & about sections
+           ========================================== */
+        
+        // Typewriter effect for roles in hero section
+        function initRolesTerminal() {
+            const output = document.getElementById('roles-output');
+            const cursor = document.getElementById('roles-cursor');
+            if (!output) return;
+
+            const roles = [
+                'Junior Pentester',
+                'Electronic Tech',
+                'IT Support',
+                'Junior DevOps',
+                'Aspiring Networking & Cybersecurity Professional'
+            ];
+            
+            let roleIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let isComplete = false;
+
+            function typeRole() {
+                const currentRole = roles[roleIndex];
+                
+                if (!isDeleting) {
+                    output.textContent = currentRole.substring(0, charIndex + 1);
+                    charIndex++;
+                    
+                    if (charIndex === currentRole.length) {
+                        isDeleting = true;
+                        setTimeout(typeRole, 2000);
+                        return;
+                    }
+                    setTimeout(typeRole, 80);
+                } else {
+                    output.textContent = currentRole.substring(0, charIndex - 1);
+                    charIndex--;
+                    
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        roleIndex = (roleIndex + 1) % roles.length;
+                        setTimeout(typeRole, 500);
+                        return;
+                    }
+                    setTimeout(typeRole, 40);
+                }
+            }
+
+            typeRole();
+        }
+
+        // Typewriter effect for about section description
+        function initAboutTerminal() {
+            const output = document.getElementById('about-output');
+            const cursor = document.getElementById('about-cursor');
+            if (!output) return;
+
+            const text = 'IT professional specializing in networking, cybersecurity, penetration testing, and electronic systems. Passionate about securing digital infrastructure and building robust solutions.';
+            
+            let charIndex = 0;
+            let isComplete = false;
+
+            function typeText() {
+                if (charIndex < text.length) {
+                    output.textContent = text.substring(0, charIndex + 1);
+                    charIndex++;
+                    setTimeout(typeText, 25);
+                } else if (!isComplete) {
+                    isComplete = true;
+                    setTimeout(restartAbout, 4000);
+                }
+            }
+
+            function restartAbout() {
+                output.textContent = '';
+                charIndex = 0;
+                isComplete = false;
+                typeText();
+            }
+
+            typeText();
+        }
+
+        /* ==========================================
+           SECTION: IMAGE LAZY LOADING
+           Optimizes performance with lazy loading
+           ========================================== */
+        
+        // Uses IntersectionObserver for efficient image lazy loading
+        function initLazyLoading() {
+            const images = document.querySelectorAll('img');
+            
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            if (img.dataset.src) {
+                                img.src = img.dataset.src;
+                                img.removeAttribute('data-src');
+                            }
+                            img.classList.add('lazy-loaded');
+                            observer.unobserve(img);
+                        }
+                    });
+                }, { rootMargin: '50px 0px', threshold: 0.01 });
+
+                images.forEach(img => {
+                    if (!img.classList.contains('lazy-loaded')) {
+                        imageObserver.observe(img);
+                    }
+                });
+            } else {
+                images.forEach(img => {
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                });
+            }
+        }
+
+        /* ==========================================
+           SECTION: TERMINAL OUTPUT ANIMATION
+           System info typewriter in hero section
+           ========================================== */
+        
+        // Terminal-style typewriter animation displaying system info
+        function initTerminal() {
+            const output = document.getElementById('terminal-output');
+            const cursor = document.getElementById('terminal-cursor');
+            if (!output) return;
+
+            const lines = [
+                'Greetings, I am Jessy Apenda...',
+                'status: scanning_network...',
+                'tools: Wireshark, Nmap, Metasploit, Cisco, Burpsuite...',
+                'location: Papua New Guinea...',
+                'mission: Securing systems, one vulnerability at a time.'
+            ];
+
+            let lineIndex = 0;
+            let charIndex = 0;
+            let currentLine = '';
+            let isComplete = false;
+
+            function typeLine() {
+                if (lineIndex < lines.length) {
+                    const line = lines[lineIndex];
+                    if (charIndex < line.length) {
+                        currentLine += line[charIndex];
+                        output.innerHTML = output.innerHTML.replace(/<span class="current-line text-slate-300">.*?<\/span>/, '');
+                        output.innerHTML += `<span class="current-line text-slate-300">${currentLine}</span>`;
+                        charIndex++;
+                        setTimeout(typeLine, 30);
+                    } else {
+                        output.innerHTML = output.innerHTML.replace(/<span class="current-line text-slate-300">.*?<\/span>/, '');
+                        output.innerHTML += `<div><span class="text-slate-300">${currentLine}</span></div>`;
+                        currentLine = '';
+                        charIndex = 0;
+                        lineIndex++;
+                        setTimeout(typeLine, 400);
+                    }
+                } else if (!isComplete) {
+                    isComplete = true;
+                    output.innerHTML += `<span class="current-line text-slate-300 animate-pulse">_</span>`;
+                    setTimeout(restartTerminal, 3000);
+                }
+            }
+
+            function restartTerminal() {
+                output.innerHTML = '';
+                lineIndex = 0;
+                charIndex = 0;
+                currentLine = '';
+                isComplete = false;
+                typeLine();
+            }
+
+            typeLine();
+        }
+
+        /* ==========================================
+           SECTION: DATA EXPORT UTILITIES
+           Export functionality for contact data
+           ========================================== */
+        
+        // Exports contacts from localStorage to CSV file
+        function exportContactsToCSV() {
+            const contacts = JSON.parse(localStorage.getItem('portfolio_contacts') || '[]');
+            if (contacts.length === 0) {
+                alert('No contacts to export');
+                return;
+            }
+            
+            const headers = ['Name', 'Email', 'Message', 'Timestamp'];
+            const csvRows = [headers.join(',')];
+            
+            contacts.forEach(contact => {
+                const row = [
+                    `"${contact.name}"`,
+                    `"${contact.email}"`,
+                    `"${contact.message.replace(/"/g, '""')}"`,
+                    `"${contact.timestamp}"`
+                ];
+                csvRows.push(row.join(','));
+            });
+            
+            const csvContent = csvRows.join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `contacts_${new Date().toISOString().split('T')[0]}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Expose function globally for console access
+        window.exportContactsToCSV = exportContactsToCSV;
+
+        /* ==========================================
+           SECTION: APPLICATION INITIALIZATION
+           Master function that initializes all features
+           ========================================== */
+        
+        // Initializes all application features on page load
+        function initApp() {
+            setLastLogin();
+            updateSystemTime();
+            renderProjects();
+            initMobileMenu();
+            handleContactForm();
+            initSmoothScroll();
+            initTerminal();
+            initLazyLoading();
+            initAboutTerminal();
+            initRolesTerminal();
+        }
+
+        // Start the application when DOM is ready
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+/* ==========================================
+   BASE STYLES
+   ========================================== */
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+    }
+
+    input, textarea, button {
+        font-family: inherit;
+    }
+
+    /* Prevent horizontal scroll */
+    * {
+        max-width: 100%;
+    }
+}
+
+/* ==========================================
+   UTILITY CLASSES
+   ========================================== */
+
+@layer utilities {
+    .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .reveal-active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Touch-friendly tap targets for mobile (min 44x44px) */
+    .touch-target {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* ==========================================
+   ANIMATIONS & KEYFRAMES
+   ========================================== */
+
+/* Glowing effect for the download resume button */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(52, 211, 153, 0.4), 0 0 10px rgba(52, 211, 153, 0.2), 0 0 15px rgba(52, 211, 153, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(52, 211, 153, 0.6), 0 0 20px rgba(52, 211, 153, 0.4), 0 0 30px rgba(52, 211, 153, 0.2);
+    }
+}
+
+.animate-glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+.animate-glow:hover {
+    animation: none;
+    box-shadow: 0 0 10px rgba(52, 211, 153, 0.5), 0 0 20px rgba(52, 211, 153, 0.3);
+}
+
+/* ==========================================
+   SCROLLBAR STYLING
+   ========================================== */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
+
+::selection {
+    background: rgba(52, 211, 153, 0.3);
+    color: #f1f5f9;
+}
+
+:focus-visible {
+    outline: 1px solid rgba(52, 211, 153, 0.5);
+    outline-offset: 2px;
+}
+
+@keyframes cursor-blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.animate-cursor {
+    animation: cursor-blink 1s infinite;
+}
+
+/* ==========================================
+   ARSENAL CARD PULSE ANIMATIONS
+   Color-coded hover effects for skill cards
+   ========================================== */
+
+/* Emerald (MySQL) */
+@keyframes arsenal-pulse-emerald {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
+}
+.animate-arsenal-pulse-emerald { animation: arsenal-pulse-emerald 1s ease-in-out infinite; }
+
+/* Cyan (Cisco) */
+@keyframes arsenal-pulse-cyan {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 211, 209, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(34, 211, 209, 0); }
+}
+.animate-arsenal-pulse-cyan { animation: arsenal-pulse-cyan 1s ease-in-out infinite; }
+
+/* Amber (Python/Java/C++) */
+@keyframes arsenal-pulse-amber {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(251, 191, 36, 0); }
+}
+.animate-arsenal-pulse-amber { animation: arsenal-pulse-amber 1s ease-in-out infinite; }
+
+/* Red (HTML/CSS/JS) */
+@keyframes arsenal-pulse-red {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(248, 113, 113, 0); }
+}
+.animate-arsenal-pulse-red { animation: arsenal-pulse-red 1s ease-in-out infinite; }
+
+/* Purple (Arduino) */
+@keyframes arsenal-pulse-purple {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(167, 139, 250, 0); }
+}
+.animate-arsenal-pulse-purple { animation: arsenal-pulse-purple 1s ease-in-out infinite; }
+
+/* Blue (IT Support) */
+@keyframes arsenal-pulse-blue {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(96, 165, 250, 0); }
+}
+.animate-arsenal-pulse-blue { animation: arsenal-pulse-blue 1s ease-in-out infinite; }
+
+/* Teal (QGIS) */
+@keyframes arsenal-pulse-teal {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(45, 212, 191, 0); }
+}
+.animate-arsenal-pulse-teal { animation: arsenal-pulse-teal 1s ease-in-out infinite; }
+
+/* Pink (DevOps) */
+@keyframes arsenal-pulse-pink {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(244, 114, 182, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(244, 114, 182, 0); }
+}
+.animate-arsenal-pulse-pink { animation: arsenal-pulse-pink 1s ease-in-out infinite; }
+
+/* Orange (Kali Linux) */
+@keyframes arsenal-pulse-orange {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(251, 146, 60, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(251, 146, 60, 0); }
+}
+.animate-arsenal-pulse-orange { animation: arsenal-pulse-orange 1s ease-in-out infinite; }
+
+/* Lime (Cloud Technologies) */
+@keyframes arsenal-pulse-lime {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(163, 230, 53, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(163, 230, 53, 0); }
+}
+.animate-arsenal-pulse-lime { animation: arsenal-pulse-lime 1s ease-in-out infinite; }
+
+/* Violet (Data Analysis) */
+@keyframes arsenal-pulse-violet {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(139, 92, 246, 0); }
+}
+.animate-arsenal-pulse-violet { animation: arsenal-pulse-violet 1s ease-in-out infinite; }
+
+/* Indigo (Email Security) */
+@keyframes arsenal-pulse-indigo {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(99, 102, 241, 0); }
+}
+.animate-arsenal-pulse-indigo { animation: arsenal-pulse-indigo 1s ease-in-out infinite; }
+
+/* ==========================================
+   HOVER INTERACTIONS
+   ========================================== */
+
+/* Scale effect on arsenal card icons */
+.arsenal-card:hover .arsenal-icon {
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================== */
+
+/* Extra small screens (below 375px) */
+@media (max-width: 374px) {
+    .arsenal-card .text-\[10px\] {
+        font-size: 8px;
+    }
+    
+    .arsenal-card .px-1\.5 {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+}
+
+/* Ensure proper scaling on very small devices */
+@media (max-width: 640px) {
+    .arsenal-card {
+        padding: 0.75rem;
+    }
+    
+    .arsenal-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+/* Improve readability on tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    section {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
